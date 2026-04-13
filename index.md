@@ -28,16 +28,6 @@ Brody is built to solve the "Context Gap" that web-based AI tools struggle with.
 
 ---
 
-## 📸 Media Preview
-> [!TIP]
-> **REPLACE ME**: To add your own screenshots, replace the URL in the brackets below.
-> Example: `![Welcome Dashboard](https://your-image-link.com/photo.png)`
-
-![Brody Dashboard Placeholder](https://via.placeholder.com/800x450/1a1a1a/ffffff?text=Brody+AI+Main+Dashboard+Screenshot)
-*The centralized command center for all your AI agents.*
-
----
-
 ## 🛠️ Key Modules
 
 | Module | Purpose |
