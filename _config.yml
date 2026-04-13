@@ -3,11 +3,10 @@ description: Your Agentic Developing Homie for Unity. Autonomous coding, real-ti
 theme: just-the-docs
 
 url: https://decnet-games.github.io
-baseurl: /UnityAiCopilot-Doc
+baseurl: /BrodyAi-Doc
 
 aux_links:
-  "Buy on Asset Store": https://assetstore.unity.com/packages/slug/your-package-id
-  "GitHub Repository": https://github.com/DecNet-Games/UnityAiCopilot-Doc
+  "Buy on Asset Store": https://assetstore.unity.com/packages/tools/generative-ai/brody-ai-your-agentic-developing-homie-356158
 
 color_scheme: dark
 search_enabled: true
