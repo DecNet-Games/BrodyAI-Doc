@@ -1,9 +1,8 @@
 title: Brody AI
 description: Your Agentic Developing Homie for Unity. Autonomous coding, real-time debugging, and professional asset generation inside the Editor.
-theme: "just-the-docs"
 remote_theme: just-the-docs/just-the-docs
 url: https://decnet-games.github.io
-baseurl: /BrodyAI-Doc
+baseurl: /UnityAiCopilot-Doc
 
 aux_links:
   "Buy on Asset Store": https://assetstore.unity.com/packages/tools/generative-ai/brody-ai-your-agentic-developing-homie-356158
