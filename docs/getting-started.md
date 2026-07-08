@@ -7,38 +7,43 @@ permalink: /docs/getting-started
 
 # 🚀 Getting Started
 
-Now that Brody is in your project, let's give him a brain.
-
-## 🧠 1. Selecting a Provider
-Brody AI is flexible. You can use expensive top-tier models for complex architecture or free local models for simple tasks.
-
-1.  Open **Tools > Brody AI > Settings**.
-2.  Navigate to the **Providers** tab.
-3.  **Choose your setup:**
-    *   **Cloud (Recommended):** Use **OpenRouter** or **OpenAI**. Enter your API Key in the "Global Vault".
-    *   **Local (Privacy):** Choose **Ollama**. Ensure the Ollama app is running on your PC.
-
-## 🧪 2. The Connectivity Test
-Before starting, we need to make sure Brody can talk to his brain.
-1.  Click the **"Test Connection"** button in the Settings window.
-2.  Wait for the status light to turn 🟢 **Online**.
+Let's configure Brody AI's brain and run your first agent tasks.
 
 ---
 
-## 👋 3. Your First Conversation
-Open the Main Window via **Tools > Brody AI** and try one of these prompts:
+## 🧠 Step 1: Set Up Your AI Brain
+Brody AI supports a variety of local and cloud engines. To set your primary provider:
 
-> "Hey Brody, can you explain what the `PlayerController` script in my project does?"
-
-> "Create a new script called `DayNightCycle.cs` that rotates a directional light based on a public speed variable."
+1.  Open the settings panel via **Tools > Brody AI > Tool Settings**.
+2.  In the **General** tab under the **Global Core Settings**, select your preferred default provider.
+3.  **Choose your setup style:**
+    *   **Commercial APIs**: Enter your OpenAI, Gemini, Claude, or DeepSeek API key in the *Global Credential Vault*.
+    *   **Aggregators (Recommended for low cost)**: Get an API key from [OpenRouter.ai](https://openrouter.ai/). You can access top-tier models and multiple **completely free models** (like nvidia/nemotron or tencent/hy3) with a single key.
+    *   **Local & Private**: Choose **Ollama**. Start the Ollama server on your machine, and download your chosen model (e.g. `ollama run llama3`).
 
 ---
 
-## 📸 Interface Breakdown
-![Main Interface](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Brody+AI+Main+Interface+Overlays)
-*1. Agent Selection | 2. Chat Log | 3. Project Context | 4. Action Buttons*
+## 🔌 Step 2: Connection Test
+Before talking to Brody, make sure the connection is fully synced:
+1.  In the **General** tab of the settings, scroll down and click **Test Global Connection**.
+2.  A popup dialog will verify if the agent successfully established contact.
+3.  If the test fails, verify your API keys or check your local Ollama address (`http://localhost:11434`).
 
-> [!TIP]
-> **Pro Tip**: You can drag and drop any file or GameObject directly into the chat to give Brody context!
+---
 
-[Explore Advanced Features](./features/index.html){: .btn .btn-outline }
+## 💬 Step 3: Your First Prompt
+Open the chat window at **Tools > Brody AI**. Let's ask Brody to create a simple gameplay script:
+
+1.  Set the mode dropdown (at the bottom left) to **Execute**.
+2.  In the text area, type:
+    > "Create a new script named PlayerMovement.cs that handles basic keyboard movement and jumping for a Rigidbody."
+3.  Click **SEND** or hit `Enter`.
+4.  Brody will stream the reasoning and write the script. Once done, a **Proposal Card** will appear showing `PlayerMovement.cs` with an **Apply** button. Click **Apply** to write the file directly into your Unity Assets folder!
+
+---
+
+## 📽️ Next Steps
+Explore specific configurations:
+*   [Quick Cheat Sheet](./quick-start.html)
+*   [Setting up Free Models](../advance/zero-cost-setup.html)
+*   [Generating Game Assets](../features/texture-lab.html)

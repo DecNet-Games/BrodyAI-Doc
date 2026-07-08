@@ -7,39 +7,38 @@ permalink: /docs/installation
 
 # 📥 Installation & Setup
 
-Brody AI is a **Premium Asset** available exclusively through the Unity Asset Store. Follow these steps to get your "Developing Homie" up and running.
+Brody AI is a professional Unity Editor extension. Follow these instructions to get your "Developing Homie" set up inside your project.
 
 ---
 
-## 💰 Step 1: Secure Your Copy
-Brody AI is not a free tool—it is a professional-grade assistant. 
-1.  Visit the [Unity Asset Store](https://assetstore.unity.com/) and search for **"Brody AI"**.
-2.  Complete your purchase.
-3.  Ensure you are logged into the same Unity Hub account you used for the purchase.
+## 🛒 Step 1: Secure Your Copy
+Brody AI can be purchased via the [Unity Asset Store](https://assetstore.unity.com/packages/tools/generative-ai/brody-ai-your-agentic-developing-homie-356158).
+1.  Complete your purchase on the Asset Store.
+2.  Ensure you are logged into the same Unity Hub account you used for the purchase.
 
-## 📦 Step 2: Import to Project
-1.  Open your Unity Project.
-2.  Open the **Package Manager** (`Window > Package Manager`).
-3.  Change the filter to **"My Assets"**.
+---
+
+## 📦 Step 2: Import into Unity
+1.  Open your target Unity Project (Unity 2021.3 LTS or newer recommended).
+2.  Go to **Window > Package Manager**.
+3.  Change the registry filter to **My Assets**.
 4.  Find **Brody AI** and click **Download**, then **Import**.
-5.  In the Import window, ensure all files under `Assets/DecNetGames/BrodyAI` are selected and click **Import**.
+5.  Ensure all files in the package (under `Assets/Brody AI`) are checked and click **Import**.
 
 ---
 
-## 🛠️ Step 3: The Setup Wizard
-Once the files are imported, Brody will try to greet you automatically.
-
-1.  If the Welcome Window doesn't pop up, go to:
-    **Tools > Brody AI > Welcome Dashboard 👋**
-2.  Click on **"Initialize Core"** to let Brody index your project for the first time.
-
-> [!IMPORTANT]
-> **No External Dependencies**: Brody AI does not require external plugins. However, you will need an API Key (OpenRouter, OpenAI, etc.) or a local Ollama setup to power his "brain".
+## 🛠️ Step 3: Initialization
+Once imported, Brody AI will initialize.
+1.  If the welcome panel doesn't open automatically, launch it from the menu bar:
+    **Tools > Brody AI > Welcome 👋**
+2.  Click on **Setup API Keys** to configure a provider brain (cloud API keys or local Ollama).
+3.  Brody AI will automatically perform a lightweight scan of your project files in the background to build its local index.
 
 ---
 
-## 📸 Setup Preview
-![Importing Brody AI](https://via.placeholder.com/600x300/1a1a1a/ffffff?text=Screenshot+showing+Package+Manager+Import)
-*Step-by-step visual of the import process.*
+## ⚙️ Requirements & Compatibility
+*   **Operating System**: Windows / macOS / Linux
+*   **Unity Editor**: 2021.3+ LTS, 2022.3+ LTS, 6000+ (Unity 6)
+*   **Dependencies**: Requires internet access to connect to cloud models, or a running local Ollama instance (`localhost:11434`) for offline mode.
 
 [Next: Getting Started](./getting-started.html){: .btn .btn-primary }

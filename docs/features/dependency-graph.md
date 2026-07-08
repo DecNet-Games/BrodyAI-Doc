@@ -2,28 +2,18 @@
 layout: default
 title: Dependency Graph
 parent: Features
-grand_parent: Docs
-nav_order: 1
+nav_order: 10
+permalink: /docs/features/dependency-graph
 ---
 
-# Dependency Graph
-{: .no_toc }
+# 🔗 Dependency Graph & Script Relations
 
-Visualize your project's architecture in real-time.
+When editing complex systems, changing a single line in a base class can break multiple inheriting components. Brody AI's **Dependency Graph** module maps script relationships to prevent compile failures.
 
 ---
 
-## What is it?
-The Dependency Graph scans your C# scripts and asmdef files to build a visual node-based graph of your project. It shows:
-*   **Nodes**: Scripts (Classes)
-*   **Edges**: References (Usage, Inheritance)
+## ⚡ How it Protects Your Project
 
-## Why use it?
-*   **Refactoring**: Identify "God Classes" that are referenced by everything.
-*   **Onboarding**: See how the codebase connects at a glance.
-*   **Optimization**: Find unnecessary dependencies that slow down compilation.
-
-## How to use
-1.  Open `Tools > Unity AI CoPilot > Architect`.
-2.  Click **"Generate Graph"**.
-3.  The graph will render in the window. You can drag nodes to rearrange them.
+1.  **Relation Analysis**: When Brody proposes to edit a script (e.g. `GameManager.cs`), the indexer immediately scans for dependencies—such as what other scripts invoke `GameManager` or inherit from it.
+2.  **Safety Injections**: It flags variables and methods that are heavily referenced by other components and reminds the AI to maintain backward compatibility during updates.
+3.  **Warning Indicators**: Proactively warns you if the generated edit will require updating other scripts in your assets folder, helping you avoid broken references.

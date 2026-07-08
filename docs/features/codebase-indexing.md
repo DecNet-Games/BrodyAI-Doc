@@ -2,28 +2,28 @@
 layout: default
 title: Codebase Indexing
 parent: Features
-nav_order: 3
+nav_order: 8
 permalink: /docs/features/codebase-indexing
 ---
 
-# 🔍 Codebase Indexing
+# 🔍 Codebase Indexing & Project Context
 
-Standard LLMs forget what happened in your other files. **Brody doesn't.**
-
-## What is indexing?
-Brody scans every `.cs` file in your project and creates a "map." This map includes:
-*   Class relationships and inheritance.
-*   Available namespaces.
-*   Public methods and variables.
-
-## Why it matters
-When you ask: *"How do I spawn an enemy?"*, Brody knows you already have an `EnemyManager` class with a `Spawn()` method. He won't try to reinvent the wheel.
+Brody AI works directly with your local directory layout. The **Codebase Indexer** scans your `Assets` directory and builds a map of your scripts and layout so the AI is never out of context.
 
 ---
 
-## 🛠️ Managing the Index
-*   **Manual Update**: Go to **Tools > Brody AI > Re-index Codebase**.
-*   **Auto-Sync**: By default, Brody re-scans the current file every time you save.
+## ⚡ How the Indexer Works
 
-![Indexing Progress](https://via.placeholder.com/600x300/1a1a1a/ffffff?text=UI+showing+Brody+Indexing+Files)
-*Brody mapping out your project's DNA.*
+Unlike basic chat windows where you have to manually copy and paste every script, Brody uses a background indexer:
+1.  **File Scans**: It maps all `.cs` (C#) script files in your project directory.
+2.  **Lightweight Mapping**: It indexes class definitions, public methods, and namespaces without overloading your system memory.
+3.  **Real-Time Updates**: The indexer automatically scans files when they are created or modified, ensuring the AI is always using current code models.
+
+---
+
+## ⚙️ Customizing Context Depth
+You can manage how much code context is sent to the AI in **Tool Settings > General** under **Context Depth**:
+
+*   **Low (Minimal Token Usage)**: The AI does not scan codebase files. Good for simple questions or generic C# questions.
+*   **Medium (Balanced - Recommended)**: Maps the top 15 most relevant scripts relative to your query.
+*   **High (Full Scan)**: Scans the entire project and sends deep context maps. Ideal for major refactoring but uses more API tokens.

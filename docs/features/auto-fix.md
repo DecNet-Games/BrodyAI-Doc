@@ -2,26 +2,26 @@
 layout: default
 title: Auto-Fix Engine
 parent: Features
-nav_order: 2
+nav_order: 7
 permalink: /docs/features/auto-fix
 ---
 
-# 🛠️ Auto-Fix Engine
+# 🛠️ Auto-Fix Engine (One-Click Error Diagnostic)
 
-One of Brody's most unique strengths is the ability to fix errors *inside* your editor without you lifting a finger.
-
-## How it Works
-When a compilation or runtime error occurs in the Unity Console, Brody provides a **"Fix with Brody"** button next to the error.
-
-1.  **Selection**: Brody reads the exact line and file mentioned in the stack trace.
-2.  **Analysis**: He looks at the surrounding code to understand *why* the error happened.
-3.  **Patching**: Brody generates a `diff` and asks for your permission to apply it.
+The **Auto-Fix Engine** is a background diagnostic module that monitors Unity's Console window. When a compilation or runtime error is detected, it automatically attempts to diagnose the issue and offer a patch.
 
 ---
 
-## 📸 Media Guide
-![Auto Fix Button](https://via.placeholder.com/700x300/1a1a1a/ffffff?text=Screenshot+of+Unity+Console+with+Fix+Button)
-*The seamless integration between the Unity Console and Brody AI.*
+## 🚀 How it Works
 
-> [!TIP]
-> **Pro Tip**: If the fix isn't perfect, you can hit "Retry" and give Brody more info (e.g., "The variable should be private instead").
+1.  When a compilation error or exception occurs, an alert banner will appear at the bottom of the main **Brody AI** chat window (e.g. *⚠️ NullReferenceException: Object reference not set...*).
+2.  Click the **🛠️ Ask Brody to Fix** button.
+3.  Brody AI will analyze the error stack trace, locate the script that generated the error, and read the code.
+4.  The agent will then write a modified version of the code that resolves the exception (e.g. adding null guards, fixing typos, resolving type mismatch compiler errors).
+5.  A **Visual Diff** will display showing the exact code changes. Click **Apply** to patch the error instantly.
+
+---
+
+## 🔒 Safety Assurances
+*   **Compile Lock Protection**: If a proposed fix fails to compile, Brody's internal validator flags it, and you can undo the change instantly via **Tools > Brody AI > Undo Last Change**.
+*   **No Code Loss**: The auto-fix engine edits files surgically. Unrelated code, comments, and structure are completely preserved.

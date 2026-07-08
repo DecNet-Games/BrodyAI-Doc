@@ -2,24 +2,31 @@
 layout: default
 title: Custom Prompts
 parent: Advanced Setup
-nav_order: 1
+nav_order: 7
 permalink: /docs/advance/custom-prompts
 ---
 
-# ✍️ Customizing Brody's Personality
+# ✍️ Customizing Brody's Naming & Coding Style
 
-Want Brody to code in a specific style? Or follow your studio's internal naming conventions? You can edit his **Core Instructions**.
-
-## How to Edit
-1.  Navigate to `Assets/DecNetGames/BrodyAI/Editor/Core/PromptBuilder.cs`.
-2.  Locate the section titled `SystemMessage`.
-3.  Add your own rules.
-
-### Example Custom Rule:
-> "Always use underscores for private fields (e.g., `_myVariable`) and never use `var` for simple types."
+You can directly modify Brody's underlying system prompt to force it to adhere to your studio's internal coding styles, naming conventions, or design structures.
 
 ---
 
-## 📸 Technical View
-![Editing Prompts](https://via.placeholder.com/700x400/1a1a1a/ffffff?text=Visual+of+PromptBuilder.cs+Code+Structure)
-*Directly influence Brody's decision-making logic.*
+## 🚀 How to Edit Prompt Rules
+
+1.  Open your project script editor and locate the file:
+    `Assets/Brody AI/Editor/Core/PromptBuilder.cs`.
+2.  Open the file and find the method `BuildSystemPrompt`.
+3.  Inside the system message builder, append your specific constraints to the text string.
+
+---
+
+## 💡 Example Style Rules to Append
+
+### C# Naming Conventions
+If you want to enforce specific naming rules, you can add this line to the system prompt:
+> *"Always use camelCase starting with an underscore for private variables (e.g. `_speed`) and PascalCase for public fields (e.g. `Speed`)."*
+
+### Disabling Legacy APIs
+If you want to prevent the AI from generating deprecated Unity methods:
+> *"Never use `OnLevelWasLoaded`. Instead, always import `UnityEngine.SceneManagement` and register callbacks to `SceneManager.sceneLoaded`."*
